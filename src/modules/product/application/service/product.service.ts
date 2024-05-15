@@ -70,7 +70,7 @@ export class ProductService {
     private mapDtoToEntity(productDto: UpdateProductDto): Product {
         console.log(productDto);
 
-        const { handle, title, description, sku, grams, stock, price, comparePrice, barcode } = productDto;
+        const { handle, title, description, sku, grams, stock, price, compareprice, barcode } = productDto;
         const product = new Product();
         product.price = !isNaN(parseFloat(price?.toString())) ? parseFloat(price?.toString()) : null;
         product.handle = handle;
@@ -79,7 +79,7 @@ export class ProductService {
         product.sku = sku;
         product.grams = grams ? parseFloat(grams?.toString()) : null;
         product.stock = stock !== undefined ? parseInt(stock?.toString(), 10) : null;
-        product.comparePrice = !isNaN(parseFloat(comparePrice?.toString())) ? parseFloat(comparePrice?.toString()) : null;
+        product.compareprice = !isNaN(parseFloat(compareprice?.toString())) ? parseFloat(compareprice?.toString()) : null;
         product.barcode = barcode;
         return product;
     }
