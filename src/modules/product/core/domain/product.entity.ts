@@ -27,7 +27,7 @@ export class Product {
   price: number;
 
   @Column({ nullable: true })
-  comparePrice: number;
+  compareprice: number;
 
   @Column({ nullable: true })
   barcode: string;

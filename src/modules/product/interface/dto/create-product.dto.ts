@@ -1,4 +1,4 @@
-import { IsString, Length, IsNotEmpty, IsNumber, IsEmpty } from 'class-validator';
+import { IsString, Length, IsNumber } from 'class-validator';
 
 export class CreateProductDto {
   @IsString()
@@ -23,8 +23,8 @@ export class CreateProductDto {
   @IsNumber()
   price: number;
 
-  @IsEmpty()
-  comparePrice: null;
+  @IsNumber()
+  compareprice: number;
 
   @IsString()
   barcode: string;
